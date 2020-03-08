@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Bin Packing", "Bin Packing\Bin Packing.pyproj", "{55EB61BF-97E1-46BC-8F14-48541A552130}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55EB61BF-97E1-46BC-8F14-48541A552130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55EB61BF-97E1-46BC-8F14-48541A552130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55EB61BF-97E1-46BC-8F14-48541A552130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55EB61BF-97E1-46BC-8F14-48541A552130}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {443F2EC6-00A3-42CA-95BE-36B0126138D3}
+	EndGlobalSection
+EndGlobal

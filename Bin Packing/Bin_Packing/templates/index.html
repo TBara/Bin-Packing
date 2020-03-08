@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row" style="margin-top: 1rem;">
+    <div class="col-md-4">
+        <form style="margin-top: 2rem;" id="main_form" action="/" method="post">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="cap-Lbl">Bin Capacity</span>
+                </div>
+                <input name="binCap" id="binCap" value="{{capacity}}" type="number" class="form-control" aria-describedby="cap-Lbl">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="vals-Lbl">Item List<br /> (space seperated)</span>
+                </div>
+                <textarea name="vals" id="vals" rows="3" cols="25" class="form-control" aria-describedby="vals-Lbl" onkeyup="checkInput(this)">{{values}}</textarea>
+            </div>
+            <div class="form-check">
+                <input hidden id="alg" type="text" value="{{algorithm}}" />
+                <input class="form-check-input" type="radio" name="RadioBtn" id="Radio1" value="First Fit">
+                <label class="form-check-label" for="Radio1">
+                    First Fit
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="RadioBtn" id="Radio2" value="First Fit Decreasing">
+                <label class="form-check-label" for="Radio2">
+                    First Fit Decreasing
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="RadioBtn" id="Radio3" value="Best Fit">
+                <label class="form-check-label" for="Radio3">
+                    Best Fit
+                </label>
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <button type="submit" value="Calculate" class="btn btn-primary" style="margin-top: 1rem;">Calculate</button>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-7">
+        {% if binsArr %}
+        <h5>Number of Bins</h5>
+        <input type="text" class="form-control" id="result" value="{{binLen}}"  style="margin-bottom: 1rem;"/>
+        <table class="table table-sm table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Bin Number</th>
+                    <th scope="col">Total Weight</th>
+                    <th scope="col">Items</th>
+                    <th scope="col">Waste</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for i in range(0, binLen)%}
+                <tr>
+                    <td scope="row">{{i + 1}}</td>
+                    <td>{{binsArr[i].sum}}</td>
+                    <td>
+                        {%for j in binsArr[i].items%}
+                        {{j }}
+                        {%endfor%}
+                    </td>
+                    <td>{{binsArr[i].waste}}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+        {% endif %}
+    </div>
+
+</div>
+
+{% endblock %}
