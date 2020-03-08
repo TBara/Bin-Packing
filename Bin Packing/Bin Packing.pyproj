@@ -46,8 +46,6 @@
   <ItemGroup>
     <Content Include="Bin_Packing\static\scripts\SiteJS.js" />
     <Content Include="requirements.txt" />
-    <Content Include="Bin_Packing\static\content\bootstrap.css" />
-    <Content Include="Bin_Packing\static\content\bootstrap.min.css" />
     <Content Include="Bin_Packing\static\content\site.css" />
     <Content Include="Bin_Packing\static\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Bin_Packing\static\fonts\glyphicons-halflings-regular.svg" />
